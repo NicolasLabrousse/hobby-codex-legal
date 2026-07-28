@@ -232,16 +232,55 @@
         <p>
           Pour comprendre comment le service est utilise, le maintenir et
           l'ameliorer, l'editeur enregistre des statistiques d'usage techniques cote
-          serveur : le nombre d'appels effectues a l'interface de programmation et le
-          nombre d'ouvertures de l'application, par compte et par jour. Ces mesures
-          sont <strong>pseudonymes</strong> (rattachees a votre identifiant de compte
-          interne, jamais a votre e-mail ni a votre nom), agregees, et ne servent pas
-          a vous profiler a des fins publicitaires. Lors des connexions au serveur,
-          votre adresse IP peut etre traitee de maniere transitoire pour assurer la
-          securite du service et limiter les abus (limitation de debit). Base legale :
-          interet legitime de l'editeur a exploiter, securiser et ameliorer
-          l'application (RGPD art. 6.1.f). Vous pouvez vous opposer a ce traitement en
-          nous contactant.
+          serveur, a trois niveaux :
+        </p>
+        <ul>
+          <li>
+            <strong>Par compte</strong> : le nombre d'appels effectues a
+            l'interface de programmation, par jour. <strong>Pseudonyme</strong>
+            (rattache a votre identifiant de compte interne, jamais a votre
+            e-mail ni a votre nom).
+          </li>
+          <li>
+            <strong>Par appareil</strong> : le nombre d'ouvertures de
+            l'application, par jour, identifie par un numero d'installation
+            genere aleatoirement sur l'appareil (jamais votre identifiant
+            publicitaire ni un autre identifiant materiel). Tant que
+            l'appareil n'est associe a aucun compte, cette mesure n'est
+            <strong>pas liee a votre identite</strong> : aucune donnee
+            personnelle n'est collectee. Des que vous vous connectez sur cet
+            appareil, la mesure du jour est <strong>liee a votre compte</strong>.
+            Ce numero d'installation est regenere a chaque reinstallation de
+            l'application et n'est jamais inclus dans vos sauvegardes.
+          </li>
+          <li>
+            <strong>Par fonctionnalite</strong> : des compteurs agreges
+            d'actions reussies (creation de figurine, seance de peinture,
+            schema de couleurs, recette, inventaire de peintures, campagne,
+            sauvegarde manuelle), par jour, identifies par le meme numero
+            d'installation que la mesure par appareil ci-dessus.
+            <strong>Aucun contenu n'est collecte</strong> : ni nom, ni photo,
+            ni note, ni recherche, seulement un nombre d'actions par jour et
+            par type. Cette mesure suit la meme regle de rattachement au
+            compte que la mesure par appareil : non liee a votre identite tant
+            que l'appareil n'est associe a aucun compte, liee a votre compte
+            des que vous vous connectez sur cet appareil.
+          </li>
+        </ul>
+        <p>
+          Ces mesures sont agregees et ne servent pas a vous profiler a des
+          fins publicitaires. Elles sont conservees au maximum 24 mois. La
+          suppression de votre compte efface le lien avec votre identite
+          (l'identifiant de compte associe est retire) mais conserve les
+          mesures d'usage par appareil et par fonctionnalite, qui restent
+          pseudonymes (rattachees a un numero d'installation) et ne sont plus
+          rattachees a un compte. Lors des connexions au serveur, votre
+          adresse IP peut etre traitee de maniere transitoire
+          pour assurer la securite du service et limiter les abus (limitation
+          de debit). Ces donnees sont hebergees dans l'Union europeenne (Clever
+          Cloud). Base legale : interet legitime de l'editeur a exploiter,
+          securiser et ameliorer l'application (RGPD art. 6.1.f). Vous pouvez
+          vous opposer a ce traitement en nous contactant.
         </p>
       </section>
 
@@ -351,9 +390,10 @@
           Donnees locales : conservees tant que vous gardez l'application et ses donnees
           sur votre appareil. Donnees de compte et sauvegardes cloud : conservees tant
           que votre compte existe, et supprimees lors de la suppression du compte.
-          Statistiques d'usage : conservees au maximum 90 jours, puis supprimees.
-          Diagnostics d'erreur : conserves selon la politique de retention de Sentry
-          (typiquement 90 jours pour les evenements bruts).
+          Statistiques d'usage par compte : conservees au maximum 90 jours, puis
+          supprimees. Statistiques d'usage par appareil : conservees au maximum 24
+          mois. Diagnostics d'erreur : conserves selon la politique de retention de
+          Sentry (typiquement 90 jours pour les evenements bruts).
         </p>
       </section>
 
@@ -470,15 +510,53 @@
         <h3>App usage measurement</h3>
         <p>
           To understand how the service is used, maintain it, and improve it, the
-          publisher records technical usage statistics on the server side: the number
-          of calls made to the programming interface and the number of app openings,
-          per account and per day. These measurements are <strong>pseudonymous</strong>
-          (tied to your internal account identifier, never to your email or name),
-          aggregated, and are not used to profile you for advertising. When connecting
-          to the server, your IP address may be processed transiently to secure the
-          service and limit abuse (rate limiting). Legal basis: the publisher's
-          legitimate interest in operating, securing, and improving the app (GDPR art.
-          6.1.f). You may object to this processing by contacting us.
+          publisher records technical usage statistics on the server side, at three
+          levels:
+        </p>
+        <ul>
+          <li>
+            <strong>Per account</strong>: the number of calls made to the
+            programming interface, per day. <strong>Pseudonymous</strong> (tied
+            to your internal account identifier, never to your email or name).
+          </li>
+          <li>
+            <strong>Per device</strong>: the number of app openings, per day,
+            identified by a randomly generated installation number on the
+            device (never your advertising identifier or any other hardware
+            identifier). As long as the device is not linked to any account,
+            this measurement is <strong>not linked to your identity</strong>:
+            no personal data is collected. As soon as you sign in on that
+            device, that day's measurement becomes <strong>linked to your
+            account</strong>. This installation number is regenerated on every
+            reinstall of the app and is never included in your backups.
+          </li>
+          <li>
+            <strong>Per feature</strong>: aggregated counters of successful
+            actions (creating a miniature, a painting session, a colour
+            scheme, a recipe, paint inventory, a project, a manual backup),
+            per day, identified by the same installation number as the
+            per-device measurement above. <strong>No content is
+            collected</strong>: no name, photo, note, or search, only a
+            count of actions per day and per type. This measurement follows
+            the same account-linking rule as the per-device measurement: not
+            linked to your identity as long as the device is not linked to
+            any account, linked to your account as soon as you sign in on
+            that device.
+          </li>
+        </ul>
+        <p>
+          These measurements are aggregated and are not used to profile you for
+          advertising. They are kept for at most 24 months. Deleting your
+          account erases the link to your identity (the associated account
+          identifier is removed) but keeps the per-device and per-feature
+          usage measurements, which remain pseudonymous (tied to an
+          installation number) and are no longer linked to an account. When
+          connecting to the server, your IP address may be processed
+          transiently to secure the service and limit
+          abuse (rate limiting). This data is hosted in the European Union
+          (Clever Cloud). Legal basis: the publisher's legitimate interest in
+          operating, securing, and improving the app (GDPR art. 6.1.f). You may
+          object to this processing by contacting us.
         </p>
       </section>
 
@@ -576,8 +654,9 @@
         <p>
           Local data: kept as long as you keep the app and its data on your device.
           Account data and cloud backups: kept as long as your account exists, and
-          deleted when the account is deleted. Usage statistics: kept for at most
-          90 days, then deleted. Error diagnostics: kept according to Sentry's
+          deleted when the account is deleted. Per-account usage statistics: kept
+          for at most 90 days, then deleted. Per-device usage statistics: kept for
+          at most 24 months. Error diagnostics: kept according to Sentry's
           retention policy (typically 90 days for raw events).
         </p>
       </section>
