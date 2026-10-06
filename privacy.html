@@ -136,7 +136,7 @@
     <header>
       <h1>Hobby Codex</h1>
       <p class="intro">Politique de confidentialite / Privacy Policy</p>
-      <p class="updated">Derniere mise a jour : 28 septembre 2026 / Last updated: September 28, 2026</p>
+      <p class="updated">Derniere mise a jour : 6 octobre 2026 / Last updated: October 6, 2026</p>
       <nav class="language-switch" aria-label="Choix de langue / Language choice">
         <a href="#fr">Francais</a>
         <a href="#en">English</a>
@@ -264,7 +264,7 @@
         <p>
           Pour comprendre comment le service est utilise, le maintenir et
           l'ameliorer, l'editeur enregistre des statistiques d'usage techniques cote
-          serveur, a trois niveaux :
+          serveur, a quatre niveaux :
         </p>
         <ul>
           <li>
@@ -297,6 +297,13 @@
             compte que la mesure par appareil : non liee a votre identite tant
             que l'appareil n'est associe a aucun compte, liee a votre compte
             des que vous vous connectez sur cet appareil.
+          </li>
+          <li>
+            <strong>Codes-barres non reconnus</strong> : quand un code scanne
+            n'est pas dans le catalogue, l'application envoie ce code, sans
+            lien avec votre appareil ni votre compte, pour que l'editeur
+            l'ajoute. Seuls le code, le type de scan (pot de peinture ou
+            boite) et un nombre de scans par jour sont conserves.
           </li>
         </ul>
         <p>
@@ -348,9 +355,10 @@
         <p>
           L'acces aux photos, a l'appareil photo ou aux fichiers est demande uniquement
           pour les fonctionnalites concernees : ajouter une image a une figurine,
-          scanner le code-barres d'une boite, importer ou exporter une sauvegarde.
-          La lecture d'un code-barres se fait sur l'appareil : aucune image ni aucun
-          code scanne n'est envoye a un serveur. Les notifications peuvent etre
+          scanner le code-barres d'une boite ou d'un pot de peinture, importer ou
+          exporter une sauvegarde. La lecture d'un code-barres se fait sur
+          l'appareil : aucune image n'est envoyee a un serveur, et un code scanne
+          ne l'est que s'il n'est pas reconnu (voir « Codes-barres non reconnus »). Les notifications peuvent etre
           demandees uniquement pour afficher le timer de session en cours sous forme de
           notification persistante, y compris lorsque l'application est en arriere-plan
           ou l'ecran verrouille. Elles ne sont pas utilisees pour du marketing, des
@@ -426,8 +434,8 @@
           sur votre appareil. Donnees de compte et sauvegardes cloud : conservees tant
           que votre compte existe, et supprimees lors de la suppression du compte.
           Statistiques d'usage par compte : conservees au maximum 90 jours, puis
-          supprimees. Statistiques d'usage par appareil : conservees au maximum 24
-          mois. Diagnostics d'erreur : conserves selon la politique de retention de
+          supprimees. Statistiques d'usage par appareil et codes-barres non
+          reconnus : conserves au maximum 24 mois. Diagnostics d'erreur : conserves selon la politique de retention de
           Sentry (typiquement 90 jours pour les evenements bruts). Donnees
           d'abonnement : conservees par RevenueCat tant qu'elles sont necessaires
           au service et traitees sur demande d'effacement, sous reserve des
@@ -578,7 +586,7 @@
         <h3>App usage measurement</h3>
         <p>
           To understand how the service is used, maintain it, and improve it, the
-          publisher records technical usage statistics on the server side, at three
+          publisher records technical usage statistics on the server side, at four
           levels:
         </p>
         <ul>
@@ -610,6 +618,13 @@
             linked to your identity as long as the device is not linked to
             any account, linked to your account as soon as you sign in on
             that device.
+          </li>
+          <li>
+            <strong>Unrecognised barcodes</strong>: when a scanned code is not
+            in the catalogue, the app sends that code, with no link to your
+            device or your account, so the publisher can add it. Only the
+            code, the kind of scan (paint pot or box) and a number of scans
+            per day are kept.
           </li>
         </ul>
         <p>
@@ -656,9 +671,10 @@
         <h3>System permissions</h3>
         <p>
           Access to photos, camera, or files is requested only for the relevant features:
-          adding an image to a miniature, scanning a box barcode, importing or exporting
-          a backup. Barcodes are read on your device: no image and no scanned code is
-          sent to a server. Notifications
+          adding an image to a miniature, scanning the barcode of a box or a paint pot,
+          importing or exporting a backup. Barcodes are read on your device: no image
+          is sent to a server, and a scanned code is sent only when it is not
+          recognised (see "Unrecognised barcodes"). Notifications
           may be requested only to display the current session timer as a persistent
           notification, including when the app is in the background or the screen is
           locked. They are not used for marketing, automatic reminders, or sending data
@@ -726,8 +742,8 @@
           Local data: kept as long as you keep the app and its data on your device.
           Account data and cloud backups: kept as long as your account exists, and
           deleted when the account is deleted. Per-account usage statistics: kept
-          for at most 90 days, then deleted. Per-device usage statistics: kept for
-          at most 24 months. Error diagnostics: kept according to Sentry's
+          for at most 90 days, then deleted. Per-device usage statistics and
+          unrecognised barcodes: kept for at most 24 months. Error diagnostics: kept according to Sentry's
           retention policy (typically 90 days for raw events). Subscription data:
           kept by RevenueCat for as long as needed to provide the service and
           handled on deletion request, subject to applicable legal obligations.
